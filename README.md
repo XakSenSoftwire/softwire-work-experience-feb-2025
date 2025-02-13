@@ -5,9 +5,9 @@
 2. Locate the [GitHub repository](https://github.com/XakSenSoftwire/softwire-work-experience-feb-2025) & these `readme` setup instructions -->
 1. Sign into your/create a new [GitHub](https://github.com/signup) account 
 2. Sign into your/create a new [Trello](https://id.atlassian.com/signup?application=trello&continue=https%3A%2F%2Ftrello.com%2Fauth%2Fatlassian%2Fcallback%3FreturnUrl%3D%252F%26display%3DeyJ2ZXJpZmljYXRpb25TdHJhdGVneSI6InNvZnQifQ%253D%253D%26aaOnboarding%3D%26updateEmail%3D%26traceId%3D%26ssoVerified%3D%26createMember%3Dtrue%26jiraInviteLink%3D&display=eyJ2ZXJpZmljYXRpb25TdHJhdGVneSI6InNvZnQifQ%3D%3D) account
-3. Here is the [Trello board](https://trello.com/b/wJRf7k7e/softwire-work-exp-feb-2025). We will be using this to manage the progress of your project - make sure you have access to view it.
+3. Here is the [Trello board](https://trello.com/invite/b/67ab6afb59b643271d16d90a/ATTIea18b0eacececb17b89dca60b2976d4dDB9CD017/softwire-work-exp-feb-2025). We will be using this to manage the progress of your project - make sure you have access to view it.
 4. Connect [Vercel](https://vercel.com/login) to your GitHub.
-5. Check you can view [this deployed site](https://softwire-work-experience-feb-2025-git-w-c7f8f8-wendifs-projects.vercel.app/). It should be a blank site with `Hello World!` written in black text in the top left.
+5. Check you can view [this deployed site](https://softwire-work-experience-feb-2025-opal.vercel.app/). It should be a blank site with `Hello World!` written in black text in the top left.
 6. Install your preferred IDE (integrated development environment) - I recommend [VSCode](https://code.visualstudio.com/download)
 7. Install [Git](https://git-scm.com/downloads/win)
 <!-- TODO: WRITE DOCKER INSTALLATION -->

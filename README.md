@@ -8,7 +8,7 @@
 5. Check you can view [this deployed site](https://softwire-work-experience-feb-2025-opal.vercel.app/). It should be a blank site with `Hello World!` written in black text in the top left.
 6. Install [VSCode](https://code.visualstudio.com/download) - you can choose a different IDE if you've used it before but it may cause you some issues with the rest of the setup.
 7. Install [Git](https://git-scm.com/downloads/win)
-8. Install [docker](https://docs.docker.com/desktop/setup/install/windows-install/). You will need to restart your computer. Afterwards, you'll automatiically download WSL as part of the docker installation. Once that is installed, open the Docker Desktop App and it should say "Your running containers show up here" - this means it is ready to go!
+8. Install [docker](https://docs.docker.com/desktop/setup/install/windows-install/). You will need to restart your computer. Afterwards, you'll automatiically download WSL as part of the docker installation. Once that is installed, open the Docker Desktop App and it should say "Your running containers show up here" - this means it is y to go!
 9. **[Optional]** Install your preferred search engine (e.g. Chrome, Firefox)
 
 > Don't be scared to ask Xak or Wendi for help :)
@@ -50,12 +50,12 @@ You should now see the project in VS Code.
 
 It is important that when your VSCode is open, turn on Autosave to make Docker's hotreload function as intended. Go to `File > Autosave`. There should be a tick displayed to show it is on.
 
-## Add aph VS Code extension (optional but recommended)
+## Add Git Graph VS Code extension (optional but recommended)
 This extension helps us visualise the git history.
 
 - Open VS Code
 - Click the extension tab on the left panel
-- Search for "aph"
+- Search for "Git Graph"
 - Click "Install"
 
 Now when you open the Source Control tab on the left, you have the option to see the git history.
@@ -139,6 +139,6 @@ Once you are happy with your code, you can open GitHub in a browser and do the f
 - [JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 - [Git cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-### Further reading for backend development
+### Further ing for backend development
 - [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 - [HTTP response codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)

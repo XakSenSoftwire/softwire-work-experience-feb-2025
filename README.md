@@ -50,12 +50,12 @@ You should now see the project in VS Code.
 
 It is important that when your VSCode is open, turn on Autosave to make Docker's hotreload function as intended. Go to `File > Autosave`. There should be a tick displayed to show it is on.
 
-## Add Git Graph VS Code extension (optional but recommended)
+## Add aph VS Code extension (optional but recommended)
 This extension helps us visualise the git history.
 
 - Open VS Code
 - Click the extension tab on the left panel
-- Search for "Git Graph"
+- Search for "aph"
 - Click "Install"
 
 Now when you open the Source Control tab on the left, you have the option to see the git history.

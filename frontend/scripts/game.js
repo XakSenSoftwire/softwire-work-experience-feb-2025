@@ -1,7 +1,7 @@
 import createGame  from "./gameLogicInterface.js"
 import { drawGrid } from "./gameUI.js"
 
-initialiseGame();
+initialiseGame(); 
 
 function initialiseGame() {
     let game = createGame();
@@ -10,3 +10,6 @@ function initialiseGame() {
 
     console.log(game);
 }
+
+
+GetElementById (score)

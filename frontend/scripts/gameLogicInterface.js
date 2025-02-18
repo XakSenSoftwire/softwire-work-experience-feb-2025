@@ -139,16 +139,18 @@ export default function createGame(initialGameState = emptyGameState) {
 		 * Possible colours: "cyan, blue, orange, yellow, green, purple, red"
 		 */
 		getTileAtPosition: function(x, y) {
-
-		},
-
-		/**
+		
+		
+		  /**
 		 * Return the score of the game
 		 * @return {int}
 		 */
-		getScore: function() {
+		getScore : function() {
+			return ;
+			} ,
 
-		},
+	
+	
 
 		/**
 		 * Return any stats that have been kept track of (tetrominos dropped, tetrises made, etc.)
@@ -158,7 +160,7 @@ export default function createGame(initialGameState = emptyGameState) {
 		 */
 		getStats: function() {
 
-		},
+		}, 
 
 		/**
 		 * Get any upcoming tetrominoes

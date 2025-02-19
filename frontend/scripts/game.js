@@ -1,11 +1,15 @@
 import createGame  from "./gameLogicInterface.js"
 import { drawGrid } from "./gameUI.js"
 
-initialiseGame();{}
-
-
-let game = createGame();
+initialiseGame();{
+    let game = createGame();
 
     drawGrid();
 
     console.log(game);
+}
+
+
+function updateScoreDisplay(gameScore){
+    document.getElementById("score").textContent = game.getScore();
+}

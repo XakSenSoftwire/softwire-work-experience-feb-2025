@@ -12,7 +12,7 @@ body {
         border-radius: 3px;
         margin: 5px;
     }
-
+    ;
     #game-grid {
         background-color: lightblue;
     }
@@ -32,5 +32,3 @@ body {
     }
 
 }
-
-<center> 

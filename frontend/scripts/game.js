@@ -1,12 +1,11 @@
 import createGame  from "./gameLogicInterface.js"
 import { drawGrid } from "./gameUI.js"
 
-initialiseGame();
+initialiseGame();{}
 
-function initialiseGame() {
-    let game = createGame();
+
+let game = createGame();
 
     drawGrid();
 
     console.log(game);
-}

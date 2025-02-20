@@ -1,34 +1,33 @@
-body {
-    background-color: rgb(246, 255, 224)
+#button{
+    padding: 5px;
+    background-color: lightgray;
 }
 
-.tetris-container {
+#howToPlayContainer{
+    padding: 5px;
+    width: 300px;
+    height: 80px;
+    border: 1px solid lightgrey;
+    background-color: rgba(255, 192, 203, 0.818);
+    text-align: center;
+    justify-content:center;
+}
+
+body{
     display: flex;
     justify-content: center;
-    padding: 5px;
-
-    .game-component-container {
-        border: 3px solid black;
-        border-radius: 3px;
-        margin: 5px;
-    }
-    ;
-    #game-grid {
-        background-color: lightblue;
-    }
-
-    #game-sidebar {
-        flex-direction: column;
-
-        #upcoming-pieces-container {
-            background-color: lightpink;
-        }
-    
-        #score-container {
-            padding: 5px;
-            background-color: lightgray;
-        }
-
-    }
-
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: lightyellow;
 }
+
+img{
+    width: 400px;
+    height: 250px;
+} 
+
+
+
+
+

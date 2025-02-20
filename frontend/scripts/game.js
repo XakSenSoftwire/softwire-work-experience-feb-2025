@@ -1,20 +1,16 @@
 import createGame  from "./gameLogicInterface.js"
 import { drawGrid, refreshGameDisplay } from "./gameUI.js"
 
-initialiseGame();{
+initialiseGame();
+function initialiseGame() {
     let game = createGame();
-
     drawGrid();
-
-
     console.log(game);
-
 }
 
 
 function updateScoreDisplay(gameScore){
     document.getElementById("score").textContent = game.getScore();
-=======
 
     window.setInterval(() => {
         game.gameTick();

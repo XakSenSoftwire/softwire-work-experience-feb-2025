@@ -16,6 +16,10 @@ export function drawGrid(){
     gameContext.stroke();
 }
 
+export function refreshGameDisplay(game) {
+    
+}
+
 function addVerticalGameLines(gameContext) {
     for (var xPosition=0; xPosition<=BOARD_WIDTH; xPosition = xPosition + BOARD_UNIT_PIXEL_SIZE) {
         gameContext.moveTo(xPosition, 0);
@@ -30,10 +34,6 @@ function addHorizontalGameLines(gameContext) {
     }
 }
 
-
-function clearGrid() {
-    
-}
 
 function drawTiles(game) {
     

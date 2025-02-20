@@ -1,5 +1,7 @@
 body {
     background-color: rgb(246, 255, 224)
+    background-color: #ffffe0
+
 }
 
 .tetris-container {
@@ -19,7 +21,7 @@ body {
 
     #game-sidebar {
         flex-direction: column;
-
+        
         #upcoming-pieces-container {
             background-color: lightpink;
         }
@@ -28,9 +30,7 @@ body {
             padding: 5px;
             background-color: lightgray;
         }
-
     }
-
 }
 
 <center> 

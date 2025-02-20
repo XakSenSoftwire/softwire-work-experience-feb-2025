@@ -7,6 +7,7 @@ services:
       - /usr/app/node_modules/
     ports:
       - 8080:8080
+
   backend:
     build: ./backend/
     volumes:
@@ -14,10 +15,19 @@ services:
       - /usr/app/node_modules/
     ports:
       - 3000:3000
+    depends_on:
+      - database
+
   database:
     image: postgres
     volumes:
       - database:/var/lib/postgresql/data
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     ports:
       - 5432:5432
 

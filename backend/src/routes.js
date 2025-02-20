@@ -10,4 +10,11 @@ router.get(
   }
 );
 
+router.get(
+  '/api/scores',
+  (req, res) => {
+    controller.getScores(res, req.body);
+  }
+);
+
 export default router;

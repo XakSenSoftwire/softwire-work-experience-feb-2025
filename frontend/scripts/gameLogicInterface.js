@@ -1,5 +1,7 @@
 import { BOARD_UNITS_HEIGHT, BOARD_UNITS_WIDTH } from "./gameUI.js"
 
+const SCORE_PER_ROW_CLEAR = 100
+
 export const Tetromino = {
 	I_Piece: "I_Piece",
 	J_Piece: "J_Piece",
@@ -116,11 +118,7 @@ export default function createGame(initialGameState = emptyGameState) {
 		 * Progress the game forward one timestep
 		 */
 		gameTick: function() {
-			// 1: Move currently active piece down
-			// 2: Lock piece in place if it can't move down anymore
-			// 3: Clear any full lines
-			// 4: Increase score
-			// 5: Get new piece from upcoming tetrominoes
+			this.scoreRows();
 		},
 
 		/**
@@ -225,6 +223,24 @@ export default function createGame(initialGameState = emptyGameState) {
 		 */
 		holdCurrentTetromino: function() {
 
+		},
+
+		/**
+		 * Check for any full rows in the game board and clear them, also updates score
+		 */
+		scoreRows: function() {
+			// iterate in reverse as removing elements during loop
+			for (let row_ind = BOARD_UNITS_HEIGHT - 1; row_ind >= 0; row_ind--) {
+				let row = this.gameState.playfield[row_ind];
+
+				let all_filled = !(row.includes(null));
+
+				if (all_filled) {
+					this.gameState.playfield.splice(row_ind, 1);  // remove row
+					this.gameState.score += SCORE_PER_ROW_CLEAR;
+					this.gameState.playfield.push(new Array(BOARD_UNITS_WIDTH).fill(null));  // add empty row
+				}
+			}
 		},
 	};
 

@@ -91,7 +91,7 @@ export const emptyGameState = {
 		}()),
 		position: {
 			x: (BOARD_UNITS_WIDTH - 4) / 2,
-			y: BOARD_UNITS_HEIGHT - 1, // Top row is reserved for game over
+			y: 3, // Top row is reserved for game over
 		},
 		colour: getRandomColour()
 	}
@@ -140,6 +140,7 @@ export default function createGame(initialGameState = emptyGameState) {
 		 */
 		gameTick: function() {
 			this.scoreRows();
+			this.moveDown();
 		},
 
 		/**
@@ -241,7 +242,7 @@ export default function createGame(initialGameState = emptyGameState) {
           
 		moveDown: function() {
 			let { x, y } = this.gameState.activeTetromino.position;
-			let newPosition = { x, y: y - 1 };
+			let newPosition = { x, y: y + 1 };
 			let newState = {
 				...this.gameState.activeTetromino,
 				position: {
@@ -325,10 +326,14 @@ export default function createGame(initialGameState = emptyGameState) {
 		 * Hold the current tetromino, swapping it for any currently held one
 		 */
 		holdCurrentTetromino: function() {
-			if (this.gameState.heldTetromino == null){
+			console.log("holding")
+			if (this.gameState.heldTetromino == null) {
+				this.gameState.heldTetromino = this.gameState.activeTetromino.name
+				console.log(this.gameState.heldTetromino)
 				this.updateActiveTetromino()
+				console.log(this.gameState.heldTetromino)
 			} else {
-				this.gameState.activeTetromino, this.gameState.heldTetromino = this.gameState.heldTetromino, this.gameState.activeTetromino
+				[this.gameState.activeTetromino, this.gameState.heldTetromino] = [this.gameState.heldTetromino, this.gameState.activeTetromino];
 			}
 		},
 
@@ -336,7 +341,7 @@ export default function createGame(initialGameState = emptyGameState) {
 			this.gameState.activeTetromino.name = this.gameState.upcomingTetrominoes.shift()
 			this.gameState.activeTetromino.tiles = TetrominoShapes[this.gameState.activeTetromino.name]
 			this.gameState.activeTetromino.position.x = (BOARD_UNITS_WIDTH - 4) / 2
-			this.gameState.activeTetromino.position.y = BOARD_UNITS_HEIGHT - 1
+			this.gameState.activeTetromino.position.y = 3
 			this.gameState.activeTetromino.colour = getRandomColour()
 
 				// add tetromino to list of upcoming ones

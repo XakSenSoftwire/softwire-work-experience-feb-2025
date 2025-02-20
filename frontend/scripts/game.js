@@ -11,6 +11,8 @@ function initialiseGame() {
     audio.play();
     audio.loop = true
 
+    game.gameState.playfield[19][3] = 'green'
+
     drawGrid();
     drawUpcomingTetrominoes(game)
     updateScoreDisplay(game);

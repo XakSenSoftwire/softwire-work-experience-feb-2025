@@ -284,6 +284,13 @@ export default function createGame(initialGameState = emptyGameState) {
 					clockwiseRotated[activeColumnIndex][n-1-activeRowIndex] = this.gameState.activeTetromino.tiles[activeRowIndex][activeColumnIndex];
 				}
 			}
+
+			if (this.isStateValid({
+				...this.gameState.activeTetromino,
+				tiles: clockwiseRotated,
+			})) {
+				this.gameState.activeTetromino.tiles = clockwiseRotated;
+			}
 		},
 
 		/**
@@ -297,6 +304,13 @@ export default function createGame(initialGameState = emptyGameState) {
 				for (let activeColumnIndex=0; activeColumnIndex<n; activeColumnIndex++) {
 					anticlockwiseRotated[n-1-activeColumnIndex][activeRowIndex] = this.gameState.activeTetromino.tiles[activeRowIndex][activeColumnIndex];
 				}
+			}
+			
+			if (this.isStateValid({
+				...this.gameState.activeTetromino,
+				tiles: anticlockwiseRotated,
+			})) {
+				this.gameState.activeTetromino.tiles = anticlockwiseRotated;
 			}
 		},
 

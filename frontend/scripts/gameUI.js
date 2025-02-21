@@ -89,3 +89,16 @@ export function drawPiece(piece, xPos, yPos,ctx) {
         }
     }
 }
+export function holdCurrentTetromino(game) {
+    const heldTetromino = game.holdCurrentTetromino();
+    const canvas = document.getElementById("held-piece-canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.canvas.height = 500;
+    ctx.canvas.width = 200;
+      
+    heldTetromino.forEach((heldTetromino, index) => {
+        const xPos = 1;
+        const yPos = index * 8; 
+        drawPiece(TetrominoShapes[heldTetromino], xPos, yPos, ctx);
+    }, 0);
+}

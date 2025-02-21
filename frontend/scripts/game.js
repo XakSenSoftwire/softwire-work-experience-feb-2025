@@ -34,12 +34,12 @@ function initialiseGame() {
             refreshGameDisplay(game);
         }
         if (event.key === "ArrowUp") {
-            game.rotateTetrominoClockwise();
             refreshGameDisplay(game);
+            game.rotateTetrominoClockwise()=this.gameState.activeTetromino.tiles
         }
         if (event.key === "x") {
-            game.rotateTetrominoAntiClockwise();
             refreshGameDisplay(game);
+            game.rotateTetrominoAntiClockwise()=this.gameState.activeTetromino.tiles
         }
     });
 

@@ -35,11 +35,11 @@ function initialiseGame() {
         }
         if (event.key === "ArrowUp") {
             refreshGameDisplay(game);
-            game.rotateTetrominoClockwise()=this.gameState.activeTetromino.tiles
+            game.rotateTetrominoClockwise()
         }
         if (event.key === "x") {
             refreshGameDisplay(game);
-            game.rotateTetrominoAntiClockwise()=this.gameState.activeTetromino.tiles
+            game.rotateTetrominoAntiClockwise()
         }
     });
 

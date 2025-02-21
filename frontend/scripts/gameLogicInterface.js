@@ -270,17 +270,27 @@ export default function createGame(initialGameState = emptyGameState) {
 			}
 		},
 
-		rotateTetrominoAntiClockwise: function() {
-			let anticlockwiseRotated = new Array(4).fill(null).map(() => new Array(4).fill(null))
-			let n = 4;
+		/**
+		 * Rotate the current tetromino clockwise 90 degrees
+		 */
 
-			for (let activeRowIndex=0; activeRowIndex<n; activeRowIndex++) {
-				for (let activeColumnIndex=0; activeColumnIndex<n; activeColumnIndex++) {
-					anticlockwiseRotated[n-1-activeColumnIndex][activeRowIndex] = this.gameState.activeTetromino.tiles[activeRowIndex][activeColumnIndex];
+
+		/**
+		 * Rotate the current tetromino anti-clockwise 90 degrees
+		 */
+		rotateTetrominoAntiClockwise: function() { 
+			let anticlockwiseRotated = new Array(4).fill(null).map(() => new Array(4).fill(null));
+			let n = 4;
+		
+			// Perform the 90-degree counter-clockwise rotation
+			for (let activeRowIndex = 0; activeRowIndex < n; activeRowIndex++) {
+				for (let activeColumnIndex = 0; activeColumnIndex < n; activeColumnIndex++) {
+					anticlockwiseRotated[n - 1 - activeColumnIndex][activeRowIndex] = this.gameState.activeTetromino.tiles[activeRowIndex][activeColumnIndex];
 				}
 			}
-		},
-
+			this.gameState.activeTetromino.tiles = anticlockwiseRotated;
+			console.log("Rotated Tetromino (AntiClockwise):", this.gameState.activeTetromino.tiles);
+		}
 		/**
 		 * Instantly drop the current tetromino as far as it goes and lock it in place
 		 */
